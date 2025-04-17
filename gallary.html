@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .buttons {
+            background-color: #970747;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .buttons a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        .buttons a:hover {
+            background-color: pink;
+            color: black;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            background-color: #970747;
+            padding: 20px;
+        }
+
+        .gallery img {
+            height: 500px;
+            width: 500px;
+            border-radius: 10px;
+            background-color: pink;
+            padding: 10px;
+            transition: transform 0.3s ease-in-out; /* Smooth transition */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1); /* Slightly enlarges the image */
+            box-shadow: 0 0 15px white; /* Adds a glow effect */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="buttons">
+        <a href= "portfolio.html" >Home</a>
+        <a href= "aboutme.html" >About me</a>
+        <a href= "gallary.html" >Gallery</a>
+        <a href=  "contact information.html" >Contact Information</a>
+    </div>
+
+    <div class="gallery">
+        <img src= "Bombay-since1995 _direction -mani ratnam _ music director - ar rahman.jpeg" alt="Bombay">
+        <img src=  "Tholiprema movie HD wallpaper Pawan Kalyan Keerthi Reddy.jpeg" alt="Tholiprema">
+        <img src= "Dil Se.jpeg" alt="dilse">
+        <img src= "Roja - Mani Ratnam.jpeg" alt="Image 4">
+        <img src=  "shyam singha roy (2021).jpeg" alt="Image 5">
+        <img src=  "9bb7e1567f5ab2ae2610807ba3c3235a.jpg" alt="Image 6">
+        <img src= "c3f642f201c869866640625a22bc5d06.jpg" alt="Image 7">
+        <img src=  "0133a74a-feb8-4baa-ae6a-9f051a32a9a9.jpeg" alt="Image 8">
+        <img src=  "pkjsp.jpg" alt="Image 9">
+        <img src=  "RAMCHARAN.jpeg" alt="Image 10">
+    </div>
+
+</body>
+</html>

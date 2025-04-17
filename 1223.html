@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterpiece Video Editor</title>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@latest"></script>
+    <style>
+        body { background: #0d0d0d; color: white; text-align: center; font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; }
+        video { width: 100%; border-radius: 10px; }
+        canvas { display: none; }
+        .controls { margin-top: 10px; }
+        button { padding: 10px; margin: 5px; background: #ff6600; border: none; color: white; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Masterpiece Video Editor 🎥✨</h1>
+        <input type="file" id="upload" accept="video/*">
+        <video id="video" controls></video>
+        <canvas id="canvas"></canvas>
+        <div class="controls">
+            <button onclick="applyFilter('grayscale')">Grayscale</button>
+            <button onclick="applyFilter('sepia')">Sepia</button>
+            <button onclick="applyFilter('invert')">Invert</button>
+            <button onclick="applyFilter('brightness')">Brightness</button>
+            <button onclick="trimVideo()">Trim Video</button>
+            <button onclick="downloadVideo()">Download</button>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById("video");
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        let filter = '';
+
+        document.getElementById("upload").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            video.src = URL.createObjectURL(file);
+        });
+
+        function applyFilter(type) {
+            filter = type;
+            video.style.filter = type;
+        }
+
+        async function trimVideo() {
+            alert("Trimming feature coming soon with FFmpeg integration!");
+        }
+
+        function downloadVideo() {
+            alert("Downloading feature coming soon!");
+        }
+    </script>
+</body>
+</html>
